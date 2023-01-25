@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body{
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            /*
+            font-size: 16px; - Default
+
+            16px Geralmente é = 1em
+            em - relativo ao tamanho padrão/natural 
+
+            */
+    
+        }
+
+        h1{
+            font: italic bolder 3em 'Arial', 'sans-serif';
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Fontes</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur et id atque iusto qui excepturi nihil tempora dignissimos officia praesentium possimus, maxime laborum vel. Ipsum praesentium itaque magnam deserunt sint.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, eaque nam omnis asperiores reprehenderit voluptatibus saepe debitis fugit! Nemo distinctio ex ducimus reiciendis aspernatur assumenda consequuntur blanditiis libero eos fugit!
+    </p>
+
+    <h2>Subtitulo do exercicio</h2>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident in tempora esse impedit architecto ea, modi ducimus exercitationem molestiae et nulla, eius iure quis suscipit voluptatibus temporibus alias natus ipsam.
+    </p>
+    
+</body>
+</html>
+
+<!-- 
+            É sempre recomendando declarar mais de uma fonte, pois caso uma não seja reconhecida existirá outras que funcionaram - Tal prática têm fundamentos do conceito de "CSS WEB Safe Fonts Combinations" (Fonts reconhecidas em qualquer dispositivo)
+
+            link: https://www.w3schools.com/csSref/css_websafe_fonts.php
+
+Medidas Absolutas 
+    cm, mm, in(Polegada), px, pt (ponto), pc (paica)
+
+Medidas Relativas
+    em, ex, rem, vw, vh, %
+
+
+PARAAFONTES A RECOMENDAÇÃO É : 
+ - px e em 
+
+ em -> relativo ao tamanho da fonte pai 
+ 
+
+ shorthand font
+
+ - font-style -> font-weight -> font-size -> font-family
+ 
+ex:  font: italic bolder 3em 'Arial', 'sans-serif';
+
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 1em;
+ font-weight: 400;
+ font-style: italic;
+   
+
+
+-->
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>
+        Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminbua o tamanho do eu navegadador.
+    </p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+
+        <source media="(max-width: 1050px )" srcset="imagens/foto-m.png" type="image/png">
+
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>
+        Vamos aprender a reproduzir áudios em HTML5.
+    </p>
+    <!--<audio src="endereço-do-audio" controls autoplay></audio>-->
+    <audio preload="metadata" controls autoplay>
+        <source src="midia/audioTests.mp3" type="audio/meg">
+        <source src="midia/audioTests.ogg" type="audio/ogg">
+        <source src="midia/audioTests.wav" type="audio/wav"><!--Arquivos Grandes e pessados, evitar sempre que possível-->
+
+        <P>
+            Infelizmente seu navegador não consegue reproduzir o áudio, <a href="midia/audioTests.mp3">clique aqui para baixar o arquivo MP3</a>
+        </P>
+    </audio>
+
+    <!--
+        OS SOURCE DOS ÁUDIOS IRÁ RESPEITAR A ORDEM DE HIERARQIA DURANTE A DECLARAÇÃO DENTRO DA TAG AUDIO.
+    
+    -->
+
+
+</body>
+</html>
+
+<!--
+ O SOURCE TÊM QUE OBDECER UMA ORDEM DE HIERARQUIA
+ PARA FUNCIONAR CORRETAMENTE
+
+ DA MENOR RESOLUÇÃO DE TELA PARA A MAIOR RESOLUÇÃO
+ DE TELA. 
+ 
+ SEGUINDO A ORDEM DA IMAGEM PADRÃO DE CARREGAMENTO DEFINIDA PELA TAG "IMG". OS SOURCES FICAM ACIMA DELA, OBDECENDO A ORDEM DE DECLARAÇÃO.
+
+    <audio src="endereço-do-audio"
+
+     controls -> para poder aparecer controle das opção/botões de reproduzir
+     
+     autoplay> -> para poder tocar a música
+
+    </audio>
+    
+    FORMATOS DE ÁUDIOS COMPATIVÉIS EM ALGUNS NAVEGADORES : MP3 WAV OGG
+-->

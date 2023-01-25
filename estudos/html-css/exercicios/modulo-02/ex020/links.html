@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited{ /*Quado já foi aberto/visitado*/
+            color: rgb(126, 26, 219);
+        }
+
+        a:hover{ /* passa o mouse em cima */
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active{ /* Ativado/precionado*/
+            color: darkorange;
+        }
+
+        .especial{
+            background-color: rgb(245, 199, 199);
+        }
+
+        .especial::before{/*Antes de*/
+            content: '=> ';
+        }
+
+        .especial::after{ /*Depois de*/
+            content: ' <=';
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+
+    <ul>
+        <li>
+            <a href="https://github.com/UandersonFerreira.github.io" target="_blank" class="especial">Repositório GitHub</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/" target="_blank">canal do Youtube</a>
+        </li>
+        <li>
+            <a href="https://br.linkedin.com/" target="_blank">Linkend</a>
+        </li>
+    </ul>
+
+    
+</body>
+</html>
+
+<!--
+ 
+    "::" -> Pseudo-Elementos 
+
+    - Um pseudo-elemento CSS é uma palavra-chave adicionada a um seletor que permite que você estilize uma PARTE ESPECÍFICA DO ELEMENTO selecionado. Por exemplo, o pseudo-elemento ::first-line aplica o estilo apenas na primeira linha de um parágrafo.
+
+    *  = id
+    .  = class
+    :  = pseudo-class
+    :: = pseudo-element
+    >  = children (filho)
+
+
+-->

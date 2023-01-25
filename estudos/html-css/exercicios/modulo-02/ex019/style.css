@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(142, 199, 142);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: rgb(20, 48, 20) ;
+}
+
+#principal{
+    text-align: center;
+    text-shadow: 1.5px 1px 3px black;
+    color: #ffffff;
+    background-color: #378194;
+
+}
+
+h2{
+    color: rgb(17, 82, 17);
+}
+
+.basico{
+    background-color: rgba(0, 0, 0, 0.788);
+    color: #E080A2;
+    font-weight: bold;
+}
+
+.intermediario{
+    background-color: black;
+    color: #eccd19;
+    font-weight: bold;
+}
+
+.avancado{
+    background-color: black;
+    color: rgb(29, 219, 219);
+      font-weight: bold;
+}
+
+/*
+ Tudo em HTML que for ID em CSS é #
+ 
+ Tudo em HTML que for classe em CSS é .
+
+
+ # - ID (Único somente em 1 elemento)
+ . - CLASSE (Multiplos pode ser aplicada em vários elementos)
+
+ OBSERVATION:
+ - ID sobrepõem as configurações de classes
+
+
+*/

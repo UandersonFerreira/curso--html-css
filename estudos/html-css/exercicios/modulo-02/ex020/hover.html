@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudos-classes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+      
+        div > p{
+            display: none;
+        }
+
+        div:hover > p{
+            display: block;
+            color: white;
+            background-color: red;
+            width: 300px;
+        }
+
+    
+
+        div:hover{
+           color: red;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+ 
+    <h1>Exemplo de Hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>
+        Passe o mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+    </div>
+    <p>Fim do Exemplo</p>
+
+    
+</body>
+</html>
+
+<!--
+
+ : -> Pseudo-Classes (Estado de um determinado elemento, ex:ativo, marcado...)
+ -   div:hover > p 
+
+- div > p - tudo que estiver dentro de div é for p 
+- No caso "p" é filha de div
+
+
+
+
+
+-->
