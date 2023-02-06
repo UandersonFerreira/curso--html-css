@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        caption{
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 8px;
+        }
+
+        th, td{
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        col.cnome{
+            background-color: chartreuse;
+        }
+
+        col.cgrupo{
+            background-color:red;
+        }
+
+        col.cprofissao{
+            background-color: yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Formatando Colunas de Tabelas</h1>
+
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="cgrupo" span="2">
+            <col class="cprofissao">
+            <!-- Também podemos definir uma class espefica para cad coluna
+
+            <col class="amarelo">
+            <col class="vermelho">
+            <col class="verde">
+            <col class="azul">
+            
+            -->
+        </colgroup>
+        <!--
+            dentro do colgroup definimos a mesma quantidade de colunas que temos e que queiremos formatar ou simplemente a quantidade de colunas com formatações que queremos, caso a mesma seja aplicavel a mais de uma coluna, através do parametro span="2" .
+        -->
+
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+
+        <tr>
+            <td>Carlos</td>
+            <td>M</td>
+            <td>21</td>
+            <td>Auxiliar Administrativo</td>
+        </tr>
+        <tr>
+            <td>Clara</td>
+            <td>F</td>
+            <td>28</td>
+            <td>Atriz</td>
+        </tr>
+        <tr>
+            <td>Pedro</td>
+            <td>M</td>
+            <td>35</td>
+            <td>Engenheiro</td>
+        </tr>
+        <tr>
+            <td>João</td>
+            <td>M</td>
+            <td>25</td>
+            <td>Pintor</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>24</td>
+            <td>Desenvolvedora</td>
+        </tr>
+
+    </table>
+    
+</body>
+</html>

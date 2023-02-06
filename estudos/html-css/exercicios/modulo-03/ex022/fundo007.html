@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container{
+            background-image: url(../imagens-cap19/target001.png);
+            background-size: 100% 100%;
+             /*largura > altura*/
+
+            position: relative;
+            height: 95vh;
+            padding: 10px;
+            background-color: purple;
+        
+        }
+
+        #conteudo{
+            background-image: url(../imagens-cap19/target001.png);
+            background-size: 100% 100%;
+            /*largura > altura*/
+
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%; /*Só é possivel por causa da position: absolute*/
+            top: 50%;/*esse também*/
+            /**/
+
+            transform: translate(-50%, -50%);
+    /*
+     transform: translate(-50%, -50%);
+     
+    - (Negativo, Negativo) -> Esquerda | Pra cima
+    + (Positivo, Positivo) -> Direita | Pra baixo
+
+    OBS: Para alinhar um conteudo contido numa div
+    o conteiner onde o mesmo se encontra necessita ser declarado com relativo é a div do conteudo como absoluta. Para que assim seja possível mexer nas configurações do left e top e aplicar a propriedade transform juntamente com seu method translate.
+
+    */
+
+        }
+
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+    
+</body>
+</html>

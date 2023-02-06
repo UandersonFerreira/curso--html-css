@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas semanticas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        th, td{
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        #col-populacao{
+            width: 10%;
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(218, 218, 218);
+        }
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(2n+1){/* Ou odd = linhas de N° Ímpares / 2n+1 */
+            background-color: rgb(34, 96, 190);
+            /*
+             -> An+B
+             A - Passo/salto = N° Inteiro
+             n - deslocamento Inteiro
+             B - Todos os números inteiros não negativos, començando em .
+
+            2n+1 -> 2 * 0 + 1 
+                 -> 0 + 1
+                 -> 1
+
+            2n -> 2 * 0     
+
+
+        
+
+            */
+        }
+
+        
+        tbody > tr:nth-child(2n){ /*Ou even = linhas de N° Pare / 2n */
+            background-color: rgb(35, 161, 35);   
+        } 
+
+        thead, tfoot{
+            background-color: gray;
+            color: white;
+        }
+
+        td.num{
+            text-align: right;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+
+        TABLE - Tabela
+            CAPTION
+            THEAD 
+                TR, TH, TD
+            TBODY 
+                TR, TH, TD
+            TFOOT 
+                TR, TH, TD
+
+        
+        TH - COLUNA/TITULO
+        TD - CÉLULA/ CONTEÚDO DA COLUNA/ DADO
+            
+        TH 
+        - scope="col" -> Quando os dados estão contidos na mesma coluna.(abaixo ou acima)
+
+        - scope="row" -> Quando os dados estão na mesma linha. (na frente/atrás) 
+
+    OBS: Se a ordem não é respeitada os dados são adicionados antes ou depois da tabela(cima ou baixo)  
+    
+    link: https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
+    -->
+    <table>
+        <caption>
+            População das Unidades Federativas 
+        </caption>
+        <thead><!-- Cabeça -->
+            <tr>
+                <th scope="col">Estado</th> <!-- 1a Coluna-->
+                <th scope="col" id="col-populacao">População</th><!-- 2a Coluna-->
+            </tr>
+
+        </thead>
+
+        <tbody><!--  Corpo -->
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">46.024.937</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20.732.660</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">16.615.526</td>
+            </tr>
+
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.659.023</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.835.379</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.088.065</td>
+            </tr>
+
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.051.113</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8.936.431</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8.442.962</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.762.154</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">6.950.976</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6.800.605</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4.108.508</td>
+            </tr>
+
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4.030.961</td>
+            </tr>
+            <tr>
+                <td >Amazonas</td>
+                <td class="num">3.952.262</td>
+            </tr>
+            <tr>
+                <td >Mato Grosso</td>
+                <td class="num">3.784.239</td>
+            </tr>
+            <tr>
+                <td >Rio grande do Norte</td>
+                <td class="num">3.303.953</td>
+            </tr>
+            <tr>
+                <td >Piauí</td>
+                <td class="num">3.270.174</td>
+            </tr>
+            <tr>
+                <td >Alagoas</td>
+                <td class="num">3.125.254</td>
+            </tr>
+            <tr>
+                <td >Distrito Federal</td>
+                <td class="num">2.923.369</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2.833.742</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.068.017</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1.616.379</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1.584.306</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">829.780</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">774.268</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">634.805</td>
+            </tr>
+        </tbody>
+
+        <tfoot><!-- Rodapé -->
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num">
+                    <strong>207.739.848</strong>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione itaque animi, veritatis ipsum provident dolor beatae corporis? Aliquam architecto, omnis ex fuga porro debitis tempore sit sapiente dolorem nobis aperiam.</span><span>Explicabo accusamus vero iste tempore, nihil dolorum quo qui eum nam reiciendis eius nemo nobis suscipit doloribus maxime totam odit sapiente delectus dignissimos nesciunt ea ad. Praesentium consequatur aspernatur blanditiis.</span><span>Unde delectus laborum aliquam voluptas accusantium non fugiat beatae tenetur pariatur reprehenderit fuga doloremque ut, cum earum itaque repellat maiores, nihil quia eum odit dignissimos, eveniet nesciunt. Asperiores, similique ea?</span><span>Corporis perferendis molestiae, autem error maiores dolorum possimus laborum iste consequatur doloremque beatae! Sit dicta expedita ad eaque, quae cupiditate dolorem quasi impedit, accusamus voluptate reprehenderit aliquam ratione, sapiente officiis!</span><span>Similique perspiciatis deleniti non hic animi quae expedita, nobis obcaecati odio incidunt, ducimus officia nihil consequuntur magni sequi error dolor provident? Ullam, dignissimos iusto temporibus expedita autem eos recusandae excepturi!</span>
+    </p>
+
+    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eaque, quasi sint earum inventore tenetur sit nobis minus culpa deleniti iure a voluptatibus quas eum asperiores. Dolorem error quaerat excepturi!</span><span>Libero, mollitia cum quo voluptatem corporis nostrum dolores id aspernatur, beatae rerum rem eveniet excepturi laborum eum est. Explicabo, tempore modi. Eligendi, obcaecati autem? Consequuntur corporis aliquam blanditiis beatae quam!</span><span>Sequi consectetur iste voluptatibus qui odit, corrupti rerum! Ullam repudiandae hic nam suscipit aliquam, voluptatem ad odio aspernatur fugit, distinctio quod fuga, rerum dignissimos mollitia sed magnam. Illo, qui. Excepturi!</span><span>Itaque id unde porro non necessitatibus ex tempore recusandae, voluptatibus iusto laudantium maxime voluptates error harum facilis quo repellat qui dolorem blanditiis dolore doloribus nesciunt illum officiis perspiciatis illo? Tempore?</span><span>Accusantium, totam rerum quis accusamus nemo recusandae culpa iusto inventore molestiae numquam! Totam quidem architecto ullam delectus modi animi maiores facilis repudiandae distinctio qui, ipsa asperiores assumenda magnam doloremque laborum?</span>
+    </p>
+
+    <p><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam ex animi tempore illo, ipsum expedita doloribus voluptates veritatis quaerat id a consequuntur? Porro, et. Id doloremque consectetur aliquid nihil quis.</span><span>Autem quae vel totam neque ut possimus velit, nobis fuga nemo fugit magni, repellendus molestias sunt ullam corporis blanditiis aliquid animi! Recusandae quaerat ad quis deleniti vero in illum perferendis?</span><span>Autem, natus laboriosam. Exercitationem ratione, hic eum voluptatum incidunt laborum at quisquam. Eligendi voluptas ab earum? Voluptates, fugiat quidem deserunt ea fugit pariatur necessitatibus, quaerat molestiae fuga rerum dignissimos minima.</span><span>Perspiciatis, impedit molestias asperiores et saepe consequatur aperiam ratione minima at ducimus aliquid voluptates a delectus quae animi molestiae quidem. Adipisci molestias ipsum placeat nisi consequatur, velit eum ipsa dicta?</span><span>At cumque dignissimos voluptatum natus adipisci consequuntur itaque dolorum distinctio? Provident quisquam necessitatibus eveniet corrupti unde, voluptates distinctio dignissimos tempore doloribus, assumenda sit laboriosam praesentium velit iste rerum error natus!</span>
+    </p>
+    
+    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nihil provident deserunt maxime id officiis voluptatibus dignissimos minus eum nobis? Quam fugit non enim minus officia. Obcaecati sint nesciunt sequi?</span><span>Quod voluptates veniam corrupti animi iure odio iste, officia tenetur perspiciatis provident consectetur minus voluptatum veritatis voluptatibus ex numquam soluta voluptas itaque assumenda quas? Aliquam labore rerum fuga dolorem. Laborum.</span><span>Soluta, delectus deleniti. Fugit culpa corporis sit in quis cum, officia nesciunt id quia inventore iste assumenda consequuntur non. Dicta cumque aliquid fuga blanditiis deserunt molestiae nam atque? Nemo, reprehenderit?</span><span>Aliquam exercitationem, libero nulla obcaecati cum vero dicta distinctio praesentium illo dolorem? Aut vero, voluptatum et impedit in assumenda alias eos debitis natus possimus perferendis! Incidunt architecto voluptatem omnis asperiores.</span><span>Numquam ipsa cupiditate, esse quas eligendi nobis earum temporibus dolorem delectus alias perferendis veritatis qui consectetur omnis praesentium? Ducimus esse error nostrum porro rerum voluptatibus sequi accusantium temporibus! Eius, odit.</span>
+    </p>
+    
+    <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ut illo quod in inventore maxime maiores modi perspiciatis suscipit reprehenderit enim, voluptate provident tempore nihil quis, non voluptates. Autem, rem!</span><span>Doloremque accusantium itaque dignissimos minus iure, magnam aliquam voluptatibus minima molestias nemo, aspernatur facere optio voluptate laboriosam voluptas quasi quam pariatur asperiores fugiat, rerum id exercitationem quaerat ab. Consequuntur, maxime?</span><span>Facilis, porro quod consequatur, voluptas quaerat tempore mollitia modi magnam cupiditate sint fugit cum culpa ea distinctio dolorem qui excepturi vitae esse quam, nam error atque? Atque, amet eaque! Libero.</span><span>Possimus assumenda maxime dicta accusamus esse, ex quidem, reiciendis ullam exercitationem enim nesciunt dignissimos repellendus dolorem error eligendi! Voluptate voluptates eaque veniam excepturi dolor vitae, in at culpa tempore fuga.</span><span>Tempora autem doloribus expedita delectus aspernatur ut eveniet tempore. Harum earum dolorem optio dolor corporis illo tempora suscipit repellat, ipsum nisi ab voluptas, officia eius quisquam, possimus natus adipisci est.</span>
+    </p>
+
+</body>
+</html>
